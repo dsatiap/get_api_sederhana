@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:get_api_sederhana/detail_page.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -95,12 +96,12 @@ class _HomePageState extends State<HomePage> {
                         '${specificUser!['first_name']} ${specificUser!['last_name']}'),
                     subtitle: Text('ID: ${specificUser!['id']}'),
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //       builder: (context) =>
-                      //           DetailPage(user: specificUser!)),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                DetailPage(user: specificUser!)),
+                      );
                     },
                   ),
                 ],
