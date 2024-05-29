@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get_api_sederhana/detail_page.dart';
+import 'package:get_api_sederhana/tambah.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -107,16 +108,16 @@ class _HomePageState extends State<HomePage> {
                 ],
               ],
             ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {
-      //     Navigator.push(
-      //       context,
-      //       MaterialPageRoute(builder: (context) => const TambahPengguna()),
-      //     );
-      //   },
-      //   tooltip: 'Tambah Pengguna',
-      //   child: const Icon(Icons.add),
-      // ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const TambahPengguna()),
+          );
+        },
+        tooltip: 'Tambah Pengguna',
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
